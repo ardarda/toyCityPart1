@@ -1,12 +1,21 @@
 require 'json'
 path = File.join(File.dirname(__FILE__), '../data/products.json')
 file = File.read(path)
+
+puts file
+
 toys_data = JSON.parse(file)
+
+puts toys_data.class
+
 
 # Print today's date
 require 'date'
+
 current_time = DateTime.now
+
 date_today = current_time.strftime "%d/%m/%Y"
+
 puts "Today's date is: " + date_today 
 
 puts "                     _            _       "
@@ -64,6 +73,12 @@ puts "|_|                                       "
 
   }
 
+
+    puts toy_prices
+puts "============================"
+
+
+
   toy_prices_dump = Array.new
 
   toy_prices.each { |toy_item| #toy item is a brand : price hash
@@ -73,10 +88,13 @@ puts "|_|                                       "
         
         toy_prices_dump.each { |toy_item_dump|
             
+            
             a = toy_item_dump["Brand"]
+            
             b = toy_item["Brand"]
 #            c =
             puts "a class is: " + a.class.to_s + " which holds brand named: " + a
+            
             puts "b class is: " + b.class.to_s + " which holds brand named: " + b
 
 
