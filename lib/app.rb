@@ -108,6 +108,9 @@ puts "============================"
                 
                 toy_item_dump["Recurrance"] += 1
                 
+                puts "lvl 2 modified toy_prices_dump array now holds: " + toy_prices_dump.to_s
+
+
             else
                 
                 toy_prices_dump.push(toy_item)
